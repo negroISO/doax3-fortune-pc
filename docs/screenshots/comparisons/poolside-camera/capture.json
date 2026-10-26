@@ -1,0 +1,87 @@
+{
+  "description": "Fortune 1.19 Poolside Relax camera: matched close-up of face, hair and shoulder before water entry",
+  "capture_run": "fortune-119-readme-nr-comparison-17",
+  "capture_prefix": "nr_002",
+  "started_utc": "2026-10-26T18:56:42.401873+00:00",
+  "scheduled_seconds_after_launch": 235.0,
+  "pairing": "same frame, copies immediately before and after the native NR pass, before UI composition",
+  "labels": {
+    "native": "native scene buffer immediately before NR; not an independently launched NR-off run",
+    "nr": "same frame after the experimental Feature18 NR pass"
+  },
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "raw_byte_layout": "BGRA8",
+  "nr_strength": "1",
+  "object_motion": "1",
+  "frame_generation": false,
+  "host_sha256": "c4906d81e170a68e0439d48278d2fbe5f00e8b3bfa1dbee52eef06cdf520d443",
+  "guest_sha256": "d68e0b332ca3635c1c820c2e843348f6afde77df317048103d148de96ce9430b",
+  "runtime_libraries": {
+    "port_dlss.dll": {
+      "sha256": "066756d747c2c1d15601f79be289d10436f2488e2bc64816ef90e9c78fb2c7dc"
+    },
+    "nvngx.dll/port_nr.dll": {
+      "sha256": "792978b614ae6dceb4e8966f9a0081b6300aabc55337b199c895b9dc9c963a50"
+    },
+    "nvngx_dlss.dll": {
+      "sha256": "2ecf41de71383416a5fb1476d26d495fc391fdc254d6e5a27689b598b2d05702"
+    },
+    "nvngx_dlssnr.dll": {
+      "sha256": "8270b350cd82de5ce89806872cdd6b6a9249b80836b91bbeb3573470744cc206"
+    }
+  },
+  "raw_sources": {
+    "before": {
+      "file": "nr_002_before_rgba8_1920x1080.raw",
+      "sha256": "a95dd8b4972176f3e7015a72894be23b7070d9ddb897b0f207f3a8e522c2858d"
+    },
+    "after": {
+      "file": "nr_002_after_rgba8_1920x1080.raw",
+      "sha256": "9c7bf597d4ccce4e8fec2b1af01ac514d757b4e6870633d412bb317641c76484"
+    }
+  },
+  "processing": "lossless BGRA-to-RGB PNG conversion; identical integer pixel crops; no resizing, sharpening, color grading or generative editing",
+  "difference_sanity_check": {
+    "mean_absolute_rgb_delta_0_to_255": 12.10088107638889,
+    "changed_pixel_fraction": 0.9997733410493828,
+    "note": "measures changed pixels, not image quality"
+  },
+  "successful_nr_log_messages": 44,
+  "exported_files": {
+    "native.png": {
+      "sha256": "024c627b5e3f1432e56067757d50cca569209414f7ec2726308c7cf09b191be3",
+      "width": 1920,
+      "height": 1080
+    },
+    "native-face.png": {
+      "sha256": "a26ac4571ca95250ff320a90d005e17cb379cb9d6b3e4a824a3636fa96836ff8",
+      "width": 520,
+      "height": 520,
+      "source_box_xyxy": [
+        960,
+        300,
+        1480,
+        820
+      ]
+    },
+    "nr.png": {
+      "sha256": "df82a7e1b0be9d362d458129dde721a4359d3401550bd221a42f23fe76967c24",
+      "width": 1920,
+      "height": 1080
+    },
+    "nr-face.png": {
+      "sha256": "2e74de11502c5815eac972aa159c991cc0ef4b344b1f8ac7b19df03d50224815",
+      "width": 520,
+      "height": 520,
+      "source_box_xyxy": [
+        960,
+        300,
+        1480,
+        820
+      ]
+    }
+  }
+}

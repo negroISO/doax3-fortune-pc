@@ -1,0 +1,87 @@
+{
+  "description": "Fortune 1.19 Rock Climbing: matched scene and upper-back/arm detail",
+  "capture_run": "fortune-119-rock-return-16",
+  "capture_prefix": "nr_000",
+  "started_utc": "2026-10-26T15:16:58.292381+00:00",
+  "scheduled_seconds_after_launch": 300.0,
+  "pairing": "same frame, copies immediately before and after the native NR pass, before UI composition",
+  "labels": {
+    "native": "native scene buffer immediately before NR; not an independently launched NR-off run",
+    "nr": "same frame after the experimental Feature18 NR pass"
+  },
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "raw_byte_layout": "BGRA8",
+  "nr_strength": "1",
+  "object_motion": "1",
+  "frame_generation": false,
+  "host_sha256": "c72b9b6a69423429da1897ff8556a070945dd7dd815e3012f491ec48cd80cd85",
+  "guest_sha256": "d68e0b332ca3635c1c820c2e843348f6afde77df317048103d148de96ce9430b",
+  "runtime_libraries": {
+    "port_dlss.dll": {
+      "sha256": "395fa101ec4c06ff32fa150df916ceba69d94edac196922352224859b7a4ee78"
+    },
+    "nvngx.dll/port_nr.dll": {
+      "sha256": "cc00c9ea23c1d7a5e8f2d6cc80bdccb45aff0f929369170779cab5e45b12960c"
+    },
+    "nvngx_dlss.dll": {
+      "sha256": "2ecf41de71383416a5fb1476d26d495fc391fdc254d6e5a27689b598b2d05702"
+    },
+    "nvngx_dlssnr.dll": {
+      "sha256": "8270b350cd82de5ce89806872cdd6b6a9249b80836b91bbeb3573470744cc206"
+    }
+  },
+  "raw_sources": {
+    "before": {
+      "file": "nr_000_before_rgba8_1920x1080.raw",
+      "sha256": "d7142dc0354f6a467ced8a560bd3d7e08ab123e1ad69ddfc7ef26cd389a3ca75"
+    },
+    "after": {
+      "file": "nr_000_after_rgba8_1920x1080.raw",
+      "sha256": "c4326733572f67e8ed9776d7901483296d9563a37b60a06ea8a363ad844bff93"
+    }
+  },
+  "processing": "lossless BGRA-to-RGB PNG conversion; identical integer pixel crops; no resizing, sharpening, color grading or generative editing",
+  "difference_sanity_check": {
+    "mean_absolute_rgb_delta_0_to_255": 6.392827449845679,
+    "changed_pixel_fraction": 0.9877440200617283,
+    "note": "measures changed pixels, not image quality"
+  },
+  "successful_nr_log_messages": 194,
+  "exported_files": {
+    "native.png": {
+      "sha256": "4c1b1d5bd6922208743e210bdcf55e9d420ade84a9fcb3f190cb0821b7747db8",
+      "width": 1920,
+      "height": 1080
+    },
+    "native-skin.png": {
+      "sha256": "d418e7639947f0d154d013992802ba9a1e93fb40ea287d2219a634bb92c2773d",
+      "width": 320,
+      "height": 300,
+      "source_box_xyxy": [
+        825,
+        495,
+        1145,
+        795
+      ]
+    },
+    "nr.png": {
+      "sha256": "9f956f7bc491a6933f0ce02bc386dbe8b652094e4f471494d5a7a61242306d42",
+      "width": 1920,
+      "height": 1080
+    },
+    "nr-skin.png": {
+      "sha256": "b398fd97e28044c155bf5f7c999ebd4094905c5ee21a9b4d3b881f5d0f015494",
+      "width": 320,
+      "height": 300,
+      "source_box_xyxy": [
+        825,
+        495,
+        1145,
+        795
+      ]
+    }
+  }
+}
