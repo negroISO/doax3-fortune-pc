@@ -1,5 +1,34 @@
 # Fortune validation
 
+## Live graphics update, 2026-10-26
+
+Both edition exports build on Windows with Clang 23.1.3 (RelWithDebInfo).
+Both ABI 3 NVIDIA adapters build with MSVC. Graphics-settings persistence,
+upscaler-support and scene-resolution tests pass in both exports. The portable
+launcher's path/version/dependency check passes against the required merged
+game data. Native 1080p/30 FPS is the first-run baseline; the saved graphics
+choices are no longer overwritten by the NR shortcut or an unchanged diagnostic
+preset file.
+
+Windows smoke tests exercised DLAA/DLSS output changes and live NR model,
+style, strength and pass controls. The latest shared-renderer Fortune run
+completed its planned nine-minute boundary with exit 0 at 4K Quality output,
+2560 x 1440 scene rendering and three NR passes. It reached hotel/casino scenes;
+this is not a new pool water-entry or whole-game regression pass. Saved settings
+and runtime logs also confirm live menu changes without restarting the game.
+
+Validation-layer retesting cleared the motion-varying component-limit and
+sRGB image-view usage errors found during development. It still reports
+startup swapchain write-after-present hazards and buffer barriers inside dynamic
+rendering. Those diagnostics remain unresolved. An earlier, pre-fix high-resolution
+transition lost the device; later bounded runs did not reproduce it. High-resolution
+and multi-pass modes remain experimental, without a new performance guarantee.
+The older gameplay measurements below do not benchmark these new modes.
+
+The shader interface/cache version changed, so incompatible entries compile
+again once. These checks cover Windows; the native Linux/Steam Deck release
+has not been rebuilt or validated with this graphics update.
+
 ## Clean repository export checks, 2026-10-26
 
 The host and optional two-DLL bridge both build from this clean source export.
